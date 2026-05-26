@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disability Comedies - Missioni Impossibili</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Import Three.js via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <div id="ui-layer">
+        <!-- Main Menu -->
+        <div id="main-menu" class="screen active">
+            <h1>Disability Comedies</h1>
+            <h2>Missioni Impossibili</h2>
+            <div class="stats">
+                <p>Punteggio Totale: <span id="menu-score">0</span></p>
+                <p>Miglior Punteggio: <span id="menu-highscore">0</span></p>
+            </div>
+            <button id="btn-new-game">Nuova Partita</button>
+            <button id="btn-continue" style="display: none;">Continua Partita</button>
+            <button id="btn-level-menu">Menu Livelli</button>
+            <button id="btn-reset">Reset Salvataggio</button>
+        </div>
+
+        <!-- Level Menu -->
+        <div id="level-menu" class="screen">
+            <h2>Seleziona Livello</h2>
+            <div id="level-list">
+                <!-- Generato via JS -->
+            </div>
+            <button id="btn-back-main">Torna al Menu</button>
+        </div>
+
+        <!-- Game UI -->
+        <div id="game-ui" class="screen">
+            <div class="top-bar">
+                <span id="game-level-name">Livello 1</span>
+                <span>Punti: <span id="game-score">0</span></span>
+                <button id="btn-exit-game">Esci al Menu</button>
+            </div>
+            
+            <div id="instruction-hint" class="hint">Clicca sul problema evidente nella scena!</div>
+
+            <!-- Question Modal -->
+            <div id="question-modal" class="modal hidden">
+                <h3 id="question-text">Domanda</h3>
+                <div id="answers-container"></div>
+            </div>
+
+            <!-- Feedback Modal -->
+            <div id="feedback-modal" class="modal hidden">
+                <h3 id="feedback-title"></h3>
+                <p id="feedback-text"></p>
+                <button id="btn-feedback-ok">OK</button>
+            </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="screen">
+            <h2>Gioco Completato!</h2>
+            <p>Hai risolto tutte le missioni impossibili.</p>
+            <p>Punteggio Finale: <span id="end-score">0</span></p>
+            <button id="btn-end-home">Torna alla Home</button>
+        </div>
+    </div>
+    
+    <!-- Three.js Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
