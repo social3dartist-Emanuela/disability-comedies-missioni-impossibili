@@ -245,3 +245,20 @@ button:disabled {
     font-size: 1.1rem;
     margin-bottom: 25px;
 }
+
+/* Dev Editor */
+#dev-editor { position: absolute; top: 20px; right: 20px; background: rgba(0, 0, 0, 0.85); color: white; padding: 15px; border-radius: 8px; z-index: 9999; font-size: 13px; border: 1px solid #444; width: 220px; pointer-events: auto; }
+#dev-editor h3 { margin: 0 0 10px 0; color: #ffaa00; font-size: 16px; text-align: center; }
+#dev-editor p { margin: 0 0 15px 0; font-size: 12px; text-align: center; }
+.editor-group { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #444; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+.editor-group label { width: 100%; font-weight: bold; margin-bottom: 5px; color: #aaa; }
+#dev-editor input[type='number'] { width: 45px; background: #333; color: white; border: 1px solid #555; padding: 3px; font-size: 11px; margin-bottom: 5px; border-radius: 3px; }
+#dev-editor button { width: 30%; background: #555; color: white; border: none; padding: 6px 0; cursor: pointer; border-radius: 4px; font-size: 11px; }
+#dev-editor button:hover { background: #777; }
+#ed-btn-save { background: #008000; }
+#ed-btn-save:hover { background: #00aa00; }
+#ed-btn-reset { background: #aa0000; }
+#ed-btn-reset:hover { background: #cc0000; }
+
+#dev-editor { position: fixed !important; pointer-events: auto !important; z-index: 99999 !important; }
+#dev-editor button { pointer-events: auto !important; cursor: pointer !important; }
