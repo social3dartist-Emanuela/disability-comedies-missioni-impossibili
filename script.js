@@ -4,7 +4,7 @@ const CONFIG = {
 };
 
 // Accessibilità 3D - Disability Comedies Missioni Impossibili
-// Cache bust: Versione pubblica pulita con hotspot visibili
+// Cache bust: Fix definitivo hotspot Livello 1 GitHub Pages
 const LEVELS = [
     {
         id: 1,
