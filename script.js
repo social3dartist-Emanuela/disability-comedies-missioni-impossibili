@@ -459,26 +459,10 @@ const LEVELS = [
                         }
                     });
                     
-                    // Applica trasformazioni salvate o di default
-                    const savedSettings = localStorage.getItem('editorSettings_level3_bathroom');
-                    if (savedSettings) {
-                        try {
-                            const data = JSON.parse(savedSettings);
-                            model.position.set(data.pos[0], data.pos[1], data.pos[2]);
-                            model.rotation.y = data.rotY;
-                            model.scale.setScalar(data.scale);
-                        } catch(e) {
-                            console.warn("Errore lettura editorSettings L3", e);
-                            model.scale.setScalar(4.2);
-                            model.position.set(-1.0, 0, -1.2);
-                            model.rotation.y = -Math.PI / 2;
-                        }
-                    } else {
-                        // Valori di trasformazione di default
-                        model.scale.setScalar(4.2);
-                        model.position.set(-1.0, 0, -1.2);
-                        model.rotation.y = -Math.PI / 2;
-                    }
+                    // Valori definitivi recuperati dall'editor per la versione pubblica
+                    model.position.set(-6.100000000000001, -6.399999999999999, -3.3000000000000007);
+                    model.rotation.y = -0.470963267949647;
+                    model.scale.setScalar(2.7999999999999998);
                     
                     window.level3Model = model;
                     group.add(model);
