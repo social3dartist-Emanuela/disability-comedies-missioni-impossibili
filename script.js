@@ -32,21 +32,14 @@ const LEVELS = [
             }
 
             // 5. Target interattivo: il gradino (problema di accessibilità)
-            // Visibile sopra le strisce, davanti allo scalino, leggermente sollevato (y=0.1)
+            // Visibile sopra le strisce, davanti allo scalino, leggermente sollevato
             const targetGeo = new THREE.BoxGeometry(4.0, 0.2, 1.2);
             const targetMat = new THREE.MeshBasicMaterial({color: 0xff0000, transparent: true, opacity: 0.2});
             const target = new THREE.Mesh(targetGeo, targetMat);
-            target.position.set(0, 0.1, -4.5); // Sulle strisce, davanti al marciapiede
             
-            // Applica modifiche da Dev Editor se presenti in localStorage
-            try {
-                const savedDev = localStorage.getItem('editorSettings_level1_hotspot');
-                if (savedDev) {
-                    const devData = JSON.parse(savedDev);
-                    if (devData.pos) target.position.set(...devData.pos);
-                    if (devData.scale) target.scale.set(...devData.scale);
-                }
-            } catch(e) { console.warn("Errore lettura editorSettings", e); }
+            // Valori definitivi recuperati dall'editor
+            target.position.set(-2.711456180001685, 1.5, -0.922291236000337);
+            target.scale.set(1.25, 1.25, 1.25);
             
             target.userData = { isTarget: true };
             group.add(target);
