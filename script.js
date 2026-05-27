@@ -1031,6 +1031,7 @@ const DevEditor = {
     indicator: null,
     
     init: function() {
+        console.log("EDITOR HOTSPOT L1 DISATTIVATO");
         if(!this.panel) return;
         
         // Listener globale per tasto E
