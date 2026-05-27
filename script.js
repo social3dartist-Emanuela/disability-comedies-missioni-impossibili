@@ -3,6 +3,8 @@ const CONFIG = {
     USE_EXTERNAL_PLAYER: true // Abilitato per caricare player2.glb
 };
 
+// Accessibilità 3D - Disability Comedies Missioni Impossibili
+// Cache bust: Versione pubblica pulita con hotspot visibili
 const LEVELS = [
     {
         id: 1,
