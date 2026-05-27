@@ -32,7 +32,7 @@ const LEVELS = [
             // 5. Target interattivo: il gradino (problema di accessibilità)
             // Visibile sopra le strisce, davanti allo scalino, leggermente sollevato (y=0.1)
             const targetGeo = new THREE.BoxGeometry(4.0, 0.2, 1.2);
-            const targetMat = new THREE.MeshLambertMaterial({color: 0xff0000, transparent: true, opacity: 0.5});
+            const targetMat = new THREE.MeshBasicMaterial({color: 0xff0000, transparent: true, opacity: 0.2});
             const target = new THREE.Mesh(targetGeo, targetMat);
             target.position.set(0, 0.1, -4.5); // Sulle strisce, davanti al marciapiede
             
@@ -414,7 +414,7 @@ const LEVELS = [
 
             // --- TARGET INTERATTIVO ---
             const targetGeo = new THREE.BoxGeometry(4.8, 7.8, 0.5);
-            const targetMat = new THREE.MeshBasicMaterial({color: 0xff0000, transparent: true, opacity: 0.02});
+            const targetMat = new THREE.MeshBasicMaterial({color: 0xff0000, transparent: true, opacity: 0.2});
             const target = new THREE.Mesh(targetGeo, targetMat);
             target.position.set(0, 4.0, -5.0); 
             target.userData = { isTarget: true };
@@ -495,7 +495,7 @@ const LEVELS = [
 
             // --- HOTSPOT (Elegante e discreto) ---
             const targetGeo = new THREE.BoxGeometry(2.0, 4.8, 2.0);
-            const targetMat = new THREE.MeshBasicMaterial({color: 0xff0000, transparent: true, opacity: 0.03});
+            const targetMat = new THREE.MeshBasicMaterial({color: 0xff0000, transparent: true, opacity: 0.2});
             const target = new THREE.Mesh(targetGeo, targetMat);
             target.position.set(-0.5, 2.4, 0.5); // Mantiene le coordinate funzionali intatte
             target.userData = { isTarget: true };
